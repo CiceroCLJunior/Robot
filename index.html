@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="intro-bg">
+      <header class="header">
+        <img src="./img/robot.svg" alt="Robot" />
+        <nav>
+          <ul class="header-menu">
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <section class="intro">
+      <div class="intro-texto">
+        <h1 class="titulo-destaque fadeInDown" data-anime="400">
+          Mais de <span class="marca marca-183">183</span> tipos de
+          <span class="marca marca-robos">robôs</span> diferentes para automação
+          da <span class="marca marca-sua">sua</span> casa.
+        </h1>
+      </div>
+
+       <form class="pedido-card fadeInDown" data-anime="600">
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@dominio.com" />
+          </div>
+
+          <div class="pedido-grid">
+            <div class="campo">
+              <label for="quantidade">Quantidade</label>
+              <div class="quantidade-stepper" data-stepper>
+                <button
+                  class="quantidade-btn"
+                  type="button"
+                  aria-label="Diminuir quantidade"
+                  data-stepper-decrease
+                  >
+                  -
+                </button>
+
+                <input
+                  type="number"
+                  id="quantidade"
+                  name="quantidade"
+                  value="1"
+                  min="1"
+                  max="6"
+                  inputmode="numeric"
+                  data-stepper-input
+                />
+
+                <button
+                  class="quantidade-btn"
+                  type="button"
+                  aria-label="Aumentar quantidade"
+                  data-stepper-increase
+                >
+                  +
+                </button>
+
+              </div>
+            </div>
+          </div>
+
+          
+    </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

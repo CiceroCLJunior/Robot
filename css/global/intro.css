@@ -1,0 +1,162 @@
+.intro-bg {
+  position: relative;
+  min-height: 720px;
+  isolation: isolate;
+}
+
+.intro-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    url('../img/pattern.svg') no-repeat left 24px top 10px,
+    linear-gradient(90deg, #004c99 0%, #1495cc 100%);
+  background-size:
+    320px auto,
+    cover;
+  clip-path: polygon(0 0, 100% 0, 100% 73%, 0 92%);
+  z-index: -1;
+  /* transform: translate3d(0, -20px, 0);
+  opacity: 0;
+  animation: intro-bg-entrando 0.8s ease forwards; */
+}
+
+.intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 260px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+}
+
+.titulo-destaque {
+  font:
+    500 3rem/1.4 'Quicksand',
+    sans-serif;
+  color: #fff;
+  max-width: 20ch;
+}
+
+.marca {
+  display: inline-block;
+  position: relative;
+}
+
+.marca::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.02em;
+  width: 28px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.marca-183::after {
+  width: 30px;
+  bottom: 0.1em;
+}
+
+.marca-robos::after {
+  width: 30px;
+  bottom: 0.1em;
+}
+
+.marca-sua::after {
+  width: 30px;
+  bottom: 0.1em;
+}
+
+.pedido-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pedido-card .btn {
+  border: none;
+  appearance: none;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  color: #222;
+  font:
+    500 1.25rem/1.5 'Quicksand',
+    sans-serif;
+}
+
+.campo input[type='text'],
+.campo input[type='email'],
+.campo input[type='number'] {
+  font:
+    500 1.25rem/1.2 'Quicksand',
+    sans-serif;
+  background: #ebeef2;
+  padding: 12px;
+  border: 1px solid #f7faff;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.quantidade-stepper {
+  display: grid;
+  grid-template-columns: 52px 1fr 52px;
+  align-items: stretch;
+  min-height: 52px;
+  border: 1px solid #f7faff;
+  border-radius: 12px;
+  background: #ebeef2;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.quantidade-stepper:focus-within {
+  border-color: #0e80bd;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px #76c4ee;
+}
+
+.quantidade-btn {
+  border: none;
+  background: transparent;
+  color: #4d5b69;
+  font:
+    500 1.5rem/1 'Quicksand',
+    sans-serif;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.quantidade-btn:hover {
+  background: rgba(14, 128, 189, 0.08);
+  color: #0e80bd;
+}
+
+.quantidade-btn:focus {
+  outline: none;
+  background: rgba(14, 128, 189, 0.12);
+  color: #0e80bd;
+}
